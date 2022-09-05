@@ -1,8 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,600;1,500&display=swap');
+
 .input-label{
     display: flex;
     flex-direction: column;
+   
+}
+label{
+    font-size: larger;
+    font-weight: 600;
+    font-family: Prompt;
+    /* color: #e11d48; */
 }
 
 input{
+    height: 2rem;
     width: 20rem;
+    border-radius: 0.5rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    border: 3px solid #7C3AED;
+    margin-bottom: 0.5rem;
+    font-size: large;
 }

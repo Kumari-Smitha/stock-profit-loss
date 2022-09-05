@@ -4,9 +4,11 @@ import Input from './components/Input';
 
 function App() {
   const [inPrice, setInPrice] = useState(0)
-  const [quantity, setQuantity] = useState(0)
   const [curPrice, setCurPrice] = useState(0)
   const [text, setText] = useState(null);
+  const [errorIP, seterrorIP] = useState(null)
+  const [errorQS, seterrorQS] = useState(null)
+  
 
   const calculateProfit = ()=>{
     return curPrice-inPrice;
@@ -40,11 +42,25 @@ function App() {
     
   }
   const initialPrice = (e)=>{
-    setInPrice(e.target.value)
+    let val = e.target.value;
+    if(val <= 0){
+      seterrorIP("Please enter a positive value greater than 0")
+    }else{
+      seterrorIP(null)
+      setInPrice(val)
+    }
+    
   }
+  
   const stockQuantity = (e)=>{
-    setQuantity(e.target.value)
+    let val = e.target.value;
+    if(val <= 0){
+      seterrorQS("Please enter a positive value greater than 0")
+    }else{
+      seterrorQS(null)
+    }
   }
+  
   const currentPrice = (e)=>{
     setCurPrice(e.target.value)
   }
@@ -52,12 +68,15 @@ function App() {
   return (
     <>
     <div className="App">
-      <h1>Stock Profile & Loss</h1>
+      <h1>Stock Profile & Loss Calculator</h1>
       <Input handleChange={initialPrice} text="Initial Price" type="number"/>
+      <p>{errorIP}</p>
       <Input handleChange={stockQuantity} text="Quantity of Stock" type="number"/>
+      <p>{errorQS}</p>
       <Input handleChange={currentPrice} text="Current Price" type="number"/>
+      
       <button onClick={displayProfitLoss}>Tell Me!</button>
-      <p>{text}</p>
+      <p className="text">{text}</p>
     </div>
     <footer className='footer'>
       <p>© | 2022 | Kumari Smitha</p>

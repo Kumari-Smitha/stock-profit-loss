@@ -6,7 +6,7 @@ export default function Input({text, type, handleChange}){
         <>
         <div className="input-label">
         <label>{text}</label>
-        <input onChange={handleChange} type={type} />
+        <input onChange={handleChange} type={type} min='0'/>
         </div>
         </>
     )
