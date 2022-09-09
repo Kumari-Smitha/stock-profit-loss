@@ -4,22 +4,24 @@ body{
     background-color: #B39D8F;
 }
 
+.inner{
+    /* height: 80vh;
+    width: 70vw;
+    border: 1px solid black; */
+}
+
 .App{
     
-    position: relative;
+    /* position: relative; */
     /* border: 1px solid black; */
     /* width: 40vw;
     height: 70vh; */
+    height: calc(100vh-5rem);
     margin: auto;
     text-align: center;
     margin-top: 2rem;
 }
-.footer{
-    position: absolute;
-    bottom: 0;
-    left: 40%;
-    
-}
+
 button{
     margin-top: 2rem;
     height: 2.5rem;
@@ -37,4 +39,36 @@ button{
 p{
     color: red;
     font-size: large;
+}
+
+.footer{
+    position: fixed;
+    width: 94vw;
+    height: 4rem;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid ;
+    box-shadow: 5px 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #796153;
+    
+}
+
+.footerText{
+    color: black;
+    
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+}
+
+img{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+    
 }

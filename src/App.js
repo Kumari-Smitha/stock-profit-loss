@@ -69,6 +69,7 @@ function App() {
     <>
     <div className="App">
       <h1>Stock Profile & Loss Calculator</h1>
+      
       <Input handleChange={initialPrice} text="Initial Price" type="number"/>
       <p>{errorIP}</p>
       <Input handleChange={stockQuantity} text="Quantity of Stock" type="number"/>
@@ -77,9 +78,15 @@ function App() {
       
       <button onClick={displayProfitLoss}>Tell Me!</button>
       <p className="text">{text}</p>
+     
     </div>
     <footer className='footer'>
-      <p>© | 2022 | Kumari Smitha</p>
+      <p className="footerText">© | 2022 | Kumari Smitha</p>
+      <ul>
+        <li><a href="https://github.com/Kumari-Smitha"><img src="github.png" alt="github"/></a></li>
+        <li><a href="https://www.linkedin.com/in/kumari-smitha/"><img src="linkedin.png" alt="linkedin"/></a></li>
+        <li><a href="https://twitter.com/Smita_Thakur_"><img src="twitter.png" alt="twitter"/></a></li>
+      </ul>
     </footer>
     </>
   );
