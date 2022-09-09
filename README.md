@@ -9,7 +9,7 @@ Here's a sneak peak of my app:
 ![image](https://user-images.githubusercontent.com/85095475/189298073-942f85a0-5b88-412c-9e9a-a57e5d27a395.png)
 
 
-
+This app is coded in ReactJS, HTML, CSS.
 You can just download the code in your system and run below commands to see the magic.
 
 npm install
