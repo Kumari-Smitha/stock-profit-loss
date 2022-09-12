@@ -5,25 +5,26 @@ import Input from './components/Input';
 function App() {
   const [inPrice, setInPrice] = useState(0)
   const [curPrice, setCurPrice] = useState(0)
+  const [quantity, setQuantity] = useState(0)
   const [text, setText] = useState(null);
   const [errorIP, seterrorIP] = useState(null)
   const [errorQS, seterrorQS] = useState(null)
   
 
   const calculateProfit = ()=>{
-    return curPrice-inPrice;
+    return (curPrice-inPrice)*quantity;
   }
 
   const calculateProfitPercentage = (profit)=>{
-    return (profit/inPrice)*100;
+    return (profit/(inPrice*quantity))*100;
   }
 
   const calculateLoss = ()=>{
-    return inPrice-curPrice;
+    return (inPrice-curPrice)*quantity;
   }
 
   const calculateLossPercentage = (loss)=>{
-    return (loss/inPrice)*100;
+    return (loss/(inPrice*quantity))*100;
   }
 
   const displayProfitLoss = ()=>{
@@ -58,6 +59,7 @@ function App() {
       seterrorQS("Please enter a positive value greater than 0")
     }else{
       seterrorQS(null)
+      setQuantity(val)
     }
   }
   
